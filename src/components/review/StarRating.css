@@ -1,0 +1,34 @@
+.star-rating {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.star-rating__star {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-gray-400);
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.star-rating__star:disabled {
+  cursor: default;
+}
+
+.star-rating__star--active {
+  color: var(--color-warning);
+}
+
+.star-rating--small .star-rating__star {
+  font-size: 1rem;
+}
+
+.star-rating--medium .star-rating__star {
+  font-size: 1.5rem;
+}
+
+.star-rating--large .star-rating__star {
+  font-size: 2rem;
+} 

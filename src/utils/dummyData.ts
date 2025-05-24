@@ -1,0 +1,158 @@
+import { Timestamp } from 'firebase/firestore';
+import { SmokingLocation, LocationType, LocationStatus } from '../types';
+
+export const dummyLocations: SmokingLocation[] = [
+  {
+    id: 'gangnam-station-booth',
+    name: '강남역 2번출구 흡연부스',
+    type: LocationType.BOOTH,
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: '',
+    address: '서울특별시 강남구 강남대로 지하 396',
+    description: '강남역 2번 출구 앞 설치된 흡연부스',
+    latitude: 37.497952,
+    longitude: 127.028506,
+    rating: 4.5,
+    reviewCount: 15,
+    status: LocationStatus.ACTIVE,
+    isVerified: true,
+    seating: { chairs: true, tables: true, standingArea: true, wheelchairAccessible: true },
+    weatherProtection: { roof: true, windBreak: true, heaters: true, coveredArea: true }
+  },
+  {
+    id: 'coex-mall-outdoor',
+    name: '삼성동 코엑스몰 외부 흡연구역',
+    type: LocationType.OUTDOOR,
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: '',
+    address: '서울특별시 강남구 삼성동 159',
+    description: '코엑스몰 외부에 위치한 흡연구역',
+    latitude: 37.508856,
+    longitude: 127.059225,
+    rating: 4.2,
+    reviewCount: 8,
+    status: LocationStatus.ACTIVE,
+    isVerified: true,
+    seating: { chairs: true, tables: true, standingArea: true, wheelchairAccessible: false },
+    weatherProtection: { roof: true, windBreak: true, heaters: false, coveredArea: false }
+  },
+  {
+    id: 'seolleung-station-indoor',
+    name: '선릉역 1번출구 흡연구역',
+    type: LocationType.INDOOR,
+    address: '서울특별시 강남구 선릉로 지하 120',
+    description: '선릉역 1번 출구 근처의 실내 흡연실',
+    latitude: 37.504479,
+    longitude: 127.049008,
+    rating: 4.8,
+    reviewCount: 23,
+    status: LocationStatus.ACTIVE,
+    isVerified: true,
+    seating: { chairs: true, tables: true, standingArea: true, wheelchairAccessible: true },
+    weatherProtection: { roof: true, windBreak: true, heaters: false, coveredArea: false },
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: ''
+  },
+  // ... (중간 데이터 생략) ...
+  {
+    id: 'sejong-city-hall',
+    name: '세종시청 흡연구역',
+    type: LocationType.OUTDOOR,
+    address: '세종특별자치시 한누리대로 2130 (보람동)',
+    description: '세종특별자치시청 청사 주변의 지정 흡연구역',
+    latitude: 36.480098,
+    longitude: 127.289035,
+    rating: 3.8,
+    reviewCount: 7, // 기존 세종 데이터와 차별화
+    status: LocationStatus.ACTIVE,
+    isVerified: true,
+    seating: { chairs: true, tables: false, standingArea: true, wheelchairAccessible: true },
+    weatherProtection: { roof: false, windBreak: true, heaters: false, coveredArea: false }, // 청사 주변이므로 일부 가림막 있을 수 있음
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: ''
+  },
+  {
+    id: 'seoul-library-back',
+    name: '서울도서관 뒤 흡연구역',
+    type: LocationType.OUTDOOR,
+    address: '서울특별시 중구 세종대로 110 (태평로1가) 인근', // 주소 보강
+    description: '서울도서관(구 서울시청사) 뒤편에 위치한 야외 흡연구역', // 설명 보강
+    latitude: 37.5658, // 추정 좌표
+    longitude: 126.9783, // 추정 좌표
+    rating: 3.6,
+    reviewCount: 9,
+    status: LocationStatus.ACTIVE,
+    isVerified: false, // 추정 좌표이므로 false
+    seating: { chairs: false, tables: false, standingArea: true, wheelchairAccessible: false },
+    weatherProtection: { roof: false, windBreak: false, heaters: false, coveredArea: false },
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: ''
+  },
+  {
+    id: 'hongdae-street-outdoor',
+    name: '홍대 걷고싶은거리 흡연구역',
+    type: LocationType.OUTDOOR,
+    address: '서울특별시 마포구 홍익로 25',
+    description: '홍대 중심가에 위치한 야외 흡연구역. 유동인구가 많음.',
+    latitude: 37.5563,
+    longitude: 126.9220,
+    rating: 4.1,
+    reviewCount: 12,
+    status: LocationStatus.ACTIVE,
+    isVerified: true,
+    seating: { chairs: false, tables: false, standingArea: true, wheelchairAccessible: false },
+    weatherProtection: { roof: false, windBreak: false, heaters: false, coveredArea: false },
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: ''
+  },
+  {
+    id: 'busan-station-booth',
+    name: '부산역 흡연부스',
+    type: LocationType.BOOTH,
+    address: '부산광역시 동구 중앙대로 206',
+    description: '부산역 광장 내 설치된 흡연부스',
+    latitude: 35.1152,
+    longitude: 129.0415,
+    rating: 4.0,
+    reviewCount: 10,
+    status: LocationStatus.ACTIVE,
+    isVerified: true,
+    seating: { chairs: true, tables: false, standingArea: true, wheelchairAccessible: true },
+    weatherProtection: { roof: true, windBreak: true, heaters: false, coveredArea: true },
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: ''
+  },
+  {
+    id: 'gwangju-terminal-indoor',
+    name: '광주종합버스터미널 실내 흡연실',
+    type: LocationType.INDOOR,
+    address: '광주광역시 서구 무진대로 904',
+    description: '광주 버스터미널 내 위치한 실내 흡연실',
+    latitude: 35.1602,
+    longitude: 126.8828,
+    rating: 3.9,
+    reviewCount: 6,
+    status: LocationStatus.ACTIVE,
+    isVerified: false,
+    seating: { chairs: true, tables: false, standingArea: true, wheelchairAccessible: false },
+    weatherProtection: { roof: true, windBreak: false, heaters: false, coveredArea: true },
+    createdAt: Timestamp.now(),
+    createdBy: 'admin',
+    tags: [],
+    imageUrl: ''
+  }
+];

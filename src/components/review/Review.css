@@ -1,0 +1,139 @@
+.review {
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.review__username {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.review__date {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.review__comment {
+  margin: 1rem 0;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+.review__image {
+  margin: 1rem 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.review__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.review__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.review__action-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.review__action-btn:hover {
+  background-color: var(--color-background-hover);
+}
+
+.review__action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.review__delete-btn {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.review__delete-btn:hover {
+  color: var(--color-danger);
+}
+
+.review__delete-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.review__content {
+  margin-bottom: 1rem;
+}
+
+.review__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+  white-space: pre-wrap;
+}
+
+.review__image-container {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.review__image:hover {
+  transform: scale(1.02);
+}
+
+.review__footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .review {
+    padding: 1rem;
+  }
+
+  .review__user-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .review__footer {
+    flex-wrap: wrap;
+  }
+
+  .review__action-btn {
+    flex: 1;
+    justify-content: center;
+  }
+} 
