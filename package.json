@@ -2,6 +2,7 @@
   "name": "smokers-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://smokers-app.github.io/smokers-app/",
   "dependencies": {
     "@playwright/test": "^1.52.0",
     "@react-google-maps/api": "^2.20.6",
@@ -30,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
